@@ -31,7 +31,7 @@ window.PORTFOLIO_CONFIG = {
     AI_EXAM_MAKER: "https://vercel.com/mohamed-hatems-projects-d3c5bfb7/exam-generator/ATz6hxdyP4txAczCuFp1Qcrz1cuK",
     ORDER_INVENTORY:
       "https://app.notion.com/p/Smart-Order-Inventory-Management-System-3881e67539e480339d08d5e67f9ded45?source=copy_link",
-    MEALMEN: "https://jobs-website-rho.vercel.app/",
+    MEALMEN: "https://www.behance.net/gallery/256959939/Moallemin-ITI-Graduation-Project?platform=direct",
     ANEES: "https://aneesai.vercel.app/",
     HOME_CYCLE:
       "https://www.behance.net/gallery/228009333/UX-UI-Case-Study-(-E-Commerce-Website-)",

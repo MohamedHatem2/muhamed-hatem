@@ -1,4 +1,4 @@
-/* Mohamed Hatem Sadek — portfolio
+/* Mohamed Hatem Sadek - portfolio
    Theme (light/dark), language (EN/AR + RTL), projects, contact form, chatbot. */
 (() => {
   "use strict";
@@ -36,7 +36,7 @@
       statusKey: "p1s",
       statusSolid: true,
       title: "AI Exam Maker",
-      titleKey: null,
+      titleKey: "p1t",
       descKey: "p1d",
       chips: ["p1a", "p1b", "p1c"],
       half: false,
@@ -55,7 +55,7 @@
       statusKey: "p3s",
       statusSolid: true,
       title: "Mealmen",
-      titleKey: null,
+      titleKey: "p3t",
       descKey: "p3d",
       chips: ["p3a", "p3b", "p3c"],
       half: false,
@@ -82,7 +82,7 @@
 
   /* ---------- Arabic translations ---------- */
   const AR = {
-    "meta.title": "محمد حاتم صادق — التفكير المنتجي × أتمتة الذكاء الاصطناعي",
+    "meta.title": "محمد حاتم صادق - التفكير المنتجي × أتمتة الذكاء الاصطناعي",
     skip: "تخطَّ إلى المحتوى",
     "logo.aria": "محمد حاتم صادق، الصفحة الرئيسية",
     "nav.aria": "التنقل الرئيسي",
@@ -101,7 +101,7 @@
     "hero.title":
       "أربط التفكير المنتجي بأتمتة الذكاء الاصطناعي <mark>لحل مشاكل حقيقية.</mark>",
     "hero.sub":
-      "أهلاً، أنا <b>محمد حاتم صادق</b>. أحوّل مشاكل العمل إلى متطلبات واضحة وتجارب عملية وأتمتة تعمل — من الاكتشاف وUX إلى الواجهات وسير عمل n8n بالذكاء الاصطناعي.",
+      "أهلاً، أنا <b>محمد حاتم صادق</b>. أحوّل مشاكل العمل إلى متطلبات واضحة وتجارب عملية وأتمتة تعمل - من الاكتشاف وUX إلى الواجهات وسير عمل n8n بالذكاء الاصطناعي.",
     "hero.tag1": "التفكير المنتجي",
     "hero.tag2": "أتمتة الذكاء الاصطناعي",
     "hero.tag3": "UX والواجهات",
@@ -120,8 +120,7 @@
     "hero.m2d": "n8n ووكلاء الذكاء الاصطناعي",
     "about.badge": "من أنا",
     "about.title": "أفهم المشكلة قبل أن أبني",
-    "about.sub":
-      "في بداية مسيرتي، أتعلم بالتنفيذ: أبحث مع المستخدمين، أحدد المتطلبات، أصمم التجربة، أكتب كود الواجهة، وأؤتمت سير العمل بـ n8n ووكلاء الذكاء الاصطناعي.",
+    "about.sub": "من مشكلة العمل إلى الحل.",
     "about.hi": "أهلاً، أنا محمد.",
     "about.role":
       "مفكّر منتجات · بنّاء أتمتة بالذكاء الاصطناعي · UX/UI والواجهات",
@@ -148,14 +147,14 @@
     e3d: "تدريب في تطبيقات الذكاء الاصطناعي والأتمتة الذكية وحالات استخدام وكلاء الذكاء الاصطناعي للمسارات التعليمية والتشغيلية.",
     e4: "بكالوريوس تكنولوجيا التعليم · جامعة الأزهر",
     e4m: "أكتوبر 2019 – يونيو 2023",
-    e4d: "تصميم تعليمي وأدوات تعلم رقمية وأنظمة تعليمية — أساس في التواصل المنظم وسير العمل الرقمي.",
+    e4d: "تصميم تعليمي وأدوات تعلم رقمية وأنظمة تعليمية - أساس في التواصل المنظم وسير العمل الرقمي.",
     "edu.achTitle": "مشاركات بارزة",
     "edu.nasaTitle": "ناسا سبيس أبس القاهرة",
     "edu.huaweiTitle": "مسابقة هواوي ICT",
     "edu.nasa":
       "تعريف مفهوم منتج (التنبؤ بحرائق الغابات) ضمن تحدٍ عالمي للابتكار.",
     "edu.huawei":
-      "مسار الشبكات — تمثيل جامعة الأزهر؛ أساسيات الشبكات وحل المشكلات التقنية.",
+      "مسار الشبكات - تمثيل جامعة الأزهر؛ أساسيات الشبكات وحل المشكلات التقنية.",
     "phil.title": "طريقة تفكيري",
     ph1t: "المشكلة أولاً",
     ph1d: "أحدد المشكلة في جملة واحدة واضحة قبل أن أصمم أو أؤتمت أي شيء.",
@@ -183,6 +182,8 @@
     "work.sub":
       "كل مشروع يوضح حقيقته: منتج مبني، أو منصة منشورة، أو أتمتة، أو فكرة، أو دراسة بحث. روابط التفاصيل تُضاف عند جاهزية دراسات الحالة.",
     p1s: "منتج مبني",
+    p3t: "مِعَلمِين",
+    p1t: "مُوَلد الامتحانات",
     p1d: "منتج بالذكاء الاصطناعي يولّد الامتحانات ويرسلها بالبريد، ويعطي الطلاب روابط للمشاركة، ويُجرى الامتحان أونلاين ويُصحَّح تلقائياً.",
     p1a: "ملكية المنتج",
     p1b: "الأتمتة",
@@ -196,13 +197,13 @@
     p3b: "تطوير المنتج",
     p3c: "النشر",
     p4s: "فكرة منصة",
-    p4t: "أنيس — الصحة النفسية للطلاب",
+    p4t: "أنيس - الصحة النفسية للطلاب",
     p4d: "منصة مقترحة لمتابعة الصحة النفسية للطلاب والتقييمات السلوكية، مع سير عمل بالذكاء الاصطناعي لتحليل ملاحظات المعلمين وتتبع التقدم وتحديد الحالات التي تحتاج دعماً إضافياً.",
     p4a: "تعريف المنتج",
     p4b: "سير عمل بالذكاء الاصطناعي",
     p4c: "تتبع التقدم",
     p5s: "دراسة بحث UX",
-    p5t: "هوم سايكل — تجارة إلكترونية",
+    p5t: "هوم سايكل - تجارة إلكترونية",
     p5d: "مقابلات واستبيانات وشخصيات وخرائط رحلة لاكتشاف نقاط الاحتكاك، ثم متطلبات منتج مبنية على البحث.",
     p5a: "أبحاث UX",
     p5b: "خرائط الرحلة",
@@ -212,7 +213,7 @@
     "process.badge": "أسلوبي",
     "process.title": "من المشكلة إلى حل يعمل",
     "process.sub":
-      "المنتج أكثر من شاشاته. هذا هو المسار الذي أتبعه في كل مرة — بما في ذلك أين تناسب الأتمتة.",
+      "المنتج أكثر من شاشاته. هذا هو المسار الذي أتبعه في كل مرة - بما في ذلك أين تناسب الأتمتة.",
     st1t: "افهم",
     st1d: "اذكر المشكلة في جملة واضحة.",
     st2t: "اكتشف",
@@ -228,7 +229,7 @@
     "toolkit.badge": "الأدوات",
     "toolkit.title": "أدوات أستخدمها في السياق",
     "toolkit.sub":
-      "ليست جداراً من الشارات — الأدوات التي تظهر في عملي المنتجي والتصميمي والأتمتة.",
+      "ليست جداراً من الشارات - الأدوات التي تظهر في عملي المنتجي والتصميمي والأتمتة.",
     tk1t: "المنتج والبحث",
     tk2t: "التصميم والواجهات",
     tk3t: "الأتمتة والذكاء الاصطناعي",
@@ -263,7 +264,7 @@
     "chat.send": "إرسال",
     "chat.note": "الإجابات مقتصرة على خلفية محمد ومشاريعه الموثّقة.",
     "chat.welcome":
-      "مرحباً — أنا مساعد رقمي يمثّل محمد حاتم صادق. اسألني عن خلفيته، مشاريعه، مهاراته، أو اهتماماته المهنية.",
+      "مرحباً - أنا مساعد رقمي يمثّل محمد حاتم صادق. اسألني عن خلفيته، مشاريعه، مهاراته، أو اهتماماته المهنية.",
     "chat.s1": "بماذا يتخصص محمد؟",
     "chat.s2": "ماذا يفعل AI Exam Maker؟",
     "chat.s3": "ما الذي بناه بـ n8n؟",
@@ -274,8 +275,8 @@
       "المساعد غير مُعد بعد. اضبط webhook في config.js بعد استيراد سير عمل n8n.",
     "chat.empty": "اكتب سؤالاً عن محمد.",
     "chat.retry": "إعادة المحاولة",
-    'edu.cert': 'الشهادة',
-    'hero.cta1': 'سيرتي الذاتية',
+    "edu.cert": "الشهادة",
+    "hero.cta1": "سيرتي الذاتية",
   };
 
   const EN_STATUS = {
@@ -294,7 +295,7 @@
     "edu.nasa":
       "Defined a product concept (forest fire prediction) in a global innovation challenge.",
     "edu.huawei":
-      "Network Track — represented Al-Azhar University; foundational networking and technical problem-solving.",
+      "Network Track - represented Al-Azhar University; foundational networking and technical problem-solving.",
     e1: "Freelance UI/UX Development Instructor · ITI",
     e1m: "Dec 2025 – Present",
     e1d: "Mentoring students in UX/UI tracks; translating complex concepts into structured learning paths; guiding research, wireframing, and prototyping.",
@@ -306,12 +307,15 @@
     e3d: "Training in AI applications, intelligent automation, and AI-agent use cases for educational and operational workflows.",
     e4: "B.A. Educational Technology · Al-Azhar University",
     e4m: "Oct 2019 – Jun 2023",
-    e4d: "Instructional design, digital learning tools, and educational systems — foundation in structured communication and digital workflows.",
+    e4d: "Instructional design, digital learning tools, and educational systems - foundation in structured communication and digital workflows.",
     "work.details": "View project details",
     "work.soon": "Details coming soon",
     p1s: "Built product",
     p1d: "An AI-powered product that generates exams, emails them, gives students shareable links, runs the exam online and grades submissions automatically.",
     p1a: "Product ownership",
+    p3t: "Mealmen",
+    p1t: "AI Exam Maker",
+    
     p1b: "Automation",
     p1c: "Experience design",
     p2s: "Built automation",
@@ -323,13 +327,13 @@
     p3b: "Product development",
     p3c: "Deployment",
     p4s: "Platform concept",
-    p4t: "Anees — Student Wellness",
+    p4t: "Anees - Student Wellness",
     p4d: "A proposed platform for monitoring student well-being and behavioural assessments, with AI-assisted workflows that analyse teacher feedback, track progress and flag cases needing extra support.",
     p4a: "Product definition",
     p4b: "AI workflows",
     p4c: "Progress tracking",
     p5s: "UX research case study",
-    p5t: "Home Cycle — E-Commerce",
+    p5t: "Home Cycle - E-Commerce",
     p5d: "Interviews, surveys, personas and journey mapping to find friction points, then research-informed product requirements.",
     p5a: "UX research",
     p5b: "Journey mapping",
@@ -343,7 +347,7 @@
     "chat.note":
       "Answers are limited to Mohamed’s verified background and projects.",
     "chat.welcome":
-      "Hi — I’m a digital assistant representing Mohamed Hatem Sadek. Ask me about his background, projects, skills, or career interests.",
+      "Hi - I’m a digital assistant representing Mohamed Hatem Sadek. Ask me about his background, projects, skills, or career interests.",
     "chat.s1": "What does Mohamed specialize in?",
     "chat.s2": "What does AI Exam Maker do?",
     "chat.s3": "What has he built with n8n?",
@@ -355,8 +359,8 @@
       "Assistant not configured yet. Set the webhook in config.js after importing the n8n workflow.",
     "chat.empty": "Type a question about Mohamed.",
     "chat.retry": "Retry",
-    'edu.cert': 'Certificate',
-    'hero.cta1': 'My Resume',
+    "edu.cert": "Certificate",
+    "hero.cta1": "My Resume",
   };
 
   const els = {
@@ -554,9 +558,9 @@
 
       let action;
       if (url) {
-        action = `<a class="btn btn--primary btn--sm project-details" href="${url}" target="_blank" rel="noopener noreferrer"><span>${t('work.details')}</span><svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a>`;
+        action = `<a class="btn btn--primary btn--sm project-details" href="${url}" target="_blank" rel="noopener noreferrer"><span>${t("work.details")}</span><svg class="ic" aria-hidden="true"><use href="#i-external"/></svg></a>`;
       } else {
-        action = `<button type="button" class="btn btn--ghost btn--sm project-details is-disabled" disabled aria-disabled="true"><span>${t('work.soon')}</span></button>`;
+        action = `<button type="button" class="btn btn--ghost btn--sm project-details is-disabled" disabled aria-disabled="true"><span>${t("work.soon")}</span></button>`;
       }
 
       const art = doc.createElement("article");
@@ -603,7 +607,7 @@
         subject || "Portfolio message from " + name,
       );
       const body = encodeURIComponent(
-        message + "\n\n— " + name + " (" + email + ")",
+        message + "\n\n- " + name + " (" + email + ")",
       );
       window.location.href =
         "mailto:" + CONTACT_EMAIL + "?subject=" + subj + "&body=" + body;

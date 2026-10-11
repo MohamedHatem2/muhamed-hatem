@@ -1785,3 +1785,25 @@ body.nav-open {
 #chatbot {
   display: none !important;
 }
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg);
+}
+
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 8px;
+  border: 2px solid var(--bg);
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
