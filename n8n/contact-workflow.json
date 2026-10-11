@@ -1,0 +1,119 @@
+{
+  "name": "Portfolio Contact Form",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "portfolio-contact",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-contact",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "portfolio-contact"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.first().json.body || $input.first().json;\nconst name = String(body.name || '').trim().slice(0, 120);\nconst email = String(body.email || '').trim().slice(0, 200);\nconst subject = String(body.subject || '').trim().slice(0, 160);\nconst message = String(body.message || '').trim().slice(0, 4000);\nconst emailOk = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);\n\nif (!name || !message || !emailOk) {\n  return [{ json: { ok: false, error: 'invalid', statusCode: 400 } }];\n}\n\nreturn [{\n  json: {\n    ok: true,\n    name,\n    email,\n    subject: subject || `Portfolio message from ${name}`,\n    message,\n    receivedAt: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "validate",
+      "name": "Validate & sanitize",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.ok }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "if-ok",
+      "name": "Valid?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { ok: false, error: 'invalid_input' } }}",
+        "options": {
+          "responseCode": 400
+        }
+      },
+      "id": "respond-bad",
+      "name": "Respond 400",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [900, 420]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{ /* configure sender in credentials; placeholder */ $env.PORTFOLIO_FROM_EMAIL || 'noreply@example.com' }}",
+        "toEmail": "Ramohamed482@gmail.com",
+        "subject": "={{ $json.subject }}",
+        "emailType": "text",
+        "text": "=From: {{ $json.name }} <{{ $json.email }}>\nReceived: {{ $json.receivedAt }}\n\n{{ $json.message }}",
+        "options": {
+          "replyTo": "={{ $json.email }}"
+        }
+      },
+      "id": "send-email",
+      "name": "Send Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [900, 200],
+      "notesInFlow": true,
+      "notes": "Configure SMTP credentials in n8n. Set PORTFOLIO_FROM_EMAIL or hardcode a verified sender. Reply-To uses the visitor email."
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { ok: true } }}",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "respond-ok",
+      "name": "Respond 200",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1120, 200]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "Validate & sanitize", "type": "main", "index": 0 }]]
+    },
+    "Validate & sanitize": {
+      "main": [[{ "node": "Valid?", "type": "main", "index": 0 }]]
+    },
+    "Valid?": {
+      "main": [
+        [{ "node": "Send Email", "type": "main", "index": 0 }],
+        [{ "node": "Respond 400", "type": "main", "index": 0 }]
+      ]
+    },
+    "Send Email": {
+      "main": [[{ "node": "Respond 200", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [{ "name": "portfolio" }],
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}
