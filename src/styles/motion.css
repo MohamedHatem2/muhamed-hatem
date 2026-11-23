@@ -1,0 +1,97 @@
+/* Page motion: every effect uses the shared palette and leaves layout intact. */
+.motion-page { position: relative; isolation: isolate; overflow-x: clip; }
+.motion-number { display: inline-block; font-variant-numeric: tabular-nums; }
+.motion-atmosphere { position: absolute; inset: 0; z-index: -1; overflow: clip; pointer-events: none; contain: paint; }
+.motion-atmosphere > svg { position: absolute; inset: 0; width: 100%; height: 100%; stroke: var(--brand-primary); stroke-width: 1; opacity: 0.22; transform: translate(var(--scene-x, 0px), var(--scene-y, 0px)); transition: transform 800ms ease-out; }
+.motion-halo { position: absolute; width: clamp(280px, 45vw, 720px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--brand-primary) 14%, transparent), transparent 68%); animation: motion-halo-drift 14s ease-in-out infinite alternate; animation-play-state: paused; }
+.motion-halo--one { top: -18%; right: -12%; }
+.motion-halo--two { bottom: -35%; left: -14%; animation-duration: 19s; animation-delay: -6s; opacity: 0.65; }
+.motion-orbit { transform-origin: 1160px 390px; animation: motion-orbit-turn 35s linear infinite; animation-play-state: paused; }
+.motion-dot { fill: var(--brand-primary); stroke: none; }
+.motion-mesh { animation: motion-mesh-drift 12s ease-in-out infinite alternate; animation-play-state: paused; }
+.motion-circuit-grid { opacity: 0.35; }
+.motion-circuit-trace { stroke-width: 2; stroke-dasharray: 70 900; animation: motion-circuit-flow 9s linear infinite; animation-play-state: paused; }
+.motion-circuit-trace--second { animation-duration: 12s; animation-delay: -5s; }
+.motion-ribbon { transform-origin: 1360px 400px; animation: motion-ribbon-turn 14s ease-in-out infinite alternate; animation-play-state: paused; }
+.motion-journey-trace { stroke-width: 2; stroke-dasharray: 100 1100; animation: motion-circuit-flow 12s linear infinite; animation-play-state: paused; }
+.motion-signal circle { transform-origin: 1270px 310px; animation: motion-signal-out 5s ease-out infinite; animation-play-state: paused; }
+.motion-signal circle:nth-child(2) { animation-delay: -1.7s; }
+.motion-signal circle:nth-child(3) { animation-delay: -3.4s; }
+.motion-float { animation: motion-float 7s ease-in-out infinite; animation-delay: var(--float-delay, 0s); animation-play-state: paused; }
+.motion-hand { display: inline-block; transform-origin: 70% 75%; animation: motion-wave-hand 2.3s ease-in-out 2; animation-play-state: paused; }
+.motion-sketch path { stroke-dasharray: 180; stroke-dashoffset: 180; animation: motion-sketch-draw 1.5s ease 350ms forwards; animation-play-state: paused; }
+.motion-page[data-motion-ready="true"] :is(.motion-halo, .motion-orbit, .motion-mesh, .motion-circuit-trace, .motion-ribbon, .motion-journey-trace, .motion-float, .motion-hand, .motion-sketch path, .motion-signal circle) { animation-play-state: running; }
+
+[data-glass] { overflow: clip; background: color-mix(in srgb, var(--theme-surface) 82%, transparent); -webkit-backdrop-filter: blur(14px) saturate(1.12); backdrop-filter: blur(14px) saturate(1.12); transition: transform 220ms ease-out, box-shadow 300ms ease, border-color 300ms ease, background-color 300ms ease; }
+[data-glass="code"] { background: var(--color-code-bg); }
+[data-glass][data-tilt] { transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); }
+[data-glass]::before { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: inherit; background: radial-gradient(240px circle at var(--glass-x, 50%) var(--glass-y, 50%), color-mix(in srgb, var(--brand-primary) 12%, transparent), transparent 72%); opacity: 0; pointer-events: none; transition: opacity 300ms ease; }
+[data-glass]::after { content: ''; position: absolute; inset: -50%; z-index: 2; background: linear-gradient(115deg, transparent 42%, color-mix(in srgb, var(--theme-ink) 5%, transparent) 49%, color-mix(in srgb, var(--theme-surface) 45%, transparent) 50%, transparent 58%); transform: translateX(-100%); opacity: 0; pointer-events: none; }
+
+@media (hover: hover) and (pointer: fine) {
+  [data-glass]:hover { border-color: color-mix(in srgb, var(--brand-primary) 48%, var(--theme-border)); box-shadow: var(--theme-shadow-card-hover), 0 0 40px -24px color-mix(in srgb, var(--brand-primary) 50%, transparent); }
+  [data-glass]:hover::before, [data-glass]:focus-within::before { opacity: 1; }
+  [data-glass]:hover::after { animation: motion-glass-pass 900ms ease-out; }
+  .motion-skill:hover > :not(svg) { translate: 0 -3px; }
+  .motion-social:hover img, .motion-opportunity:hover svg { transform: translateY(-2px) rotate(-5deg); }
+}
+.motion-skill > :not(svg), .motion-social img, .motion-opportunity svg { transition: transform 300ms ease, translate 300ms ease; }
+.motion-skill { --skill-glow: var(--brand-primary); }
+.motion-skill:hover { box-shadow: 0 8px 24px -14px var(--skill-glow); }
+.motion-skill:hover rect { animation-duration: 2.8s; }
+.motion-portrait img { transition: scale 900ms cubic-bezier(0.22, 1, 0.36, 1); }
+.motion-portrait:hover img { scale: 1.025; }
+.motion-form:focus-within { border-color: color-mix(in srgb, var(--brand-primary) 45%, var(--theme-border)); box-shadow: var(--theme-shadow-card), 0 0 0 3px color-mix(in srgb, var(--brand-primary) 6%, transparent); }
+.motion-form label { position: relative; overflow: clip; }
+.motion-form label::after { content: ''; position: absolute; right: 16px; bottom: 0; left: 16px; height: 2px; background: linear-gradient(90deg, var(--brand-primary), var(--brand-primary-light)); transform: scaleX(0); transform-origin: left; transition: transform 350ms ease; }
+.motion-form label:focus-within::after { transform: scaleX(1); }
+.motion-paperplane { animation: motion-paperplane 6s ease-in-out infinite; animation-play-state: paused; }
+.motion-page[data-motion-ready="true"] .motion-paperplane { animation-play-state: running; }
+.motion-timeline::after { content: ''; position: absolute; top: 24px; bottom: 24px; left: 18px; width: 1px; pointer-events: none; background: linear-gradient(transparent, var(--brand-primary-light), transparent) 0 -180px / 100% 180px no-repeat; animation: motion-timeline-flow 8s linear infinite; animation-play-state: paused; }
+.motion-status-dot { animation: motion-status-pulse 3s ease-out infinite; animation-play-state: paused; }
+.motion-page[data-motion-ready="true"] .motion-status-dot, .motion-page[data-motion-ready="true"] .motion-timeline::after { animation-play-state: running; }
+.motion-page[data-motion-ready="true"] .motion-phase[aria-selected="true"] > span:first-child svg { animation: motion-phase-select 550ms ease; }
+.motion-dialog[open] { animation: motion-dialog-enter 300ms cubic-bezier(0.22, 1, 0.36, 1); }
+.motion-dialog::backdrop { animation: motion-backdrop-enter 250ms ease; }
+
+.button-primary, .button-secondary { position: relative; overflow: clip; }
+.button-primary::after, .button-secondary::after { content: ''; position: absolute; inset: -40%; background: linear-gradient(110deg, transparent 40%, #ffffff45 50%, transparent 60%); transform: translateX(-130%); pointer-events: none; }
+.button-primary:hover::after, .button-secondary:hover::after { animation: motion-button-shine 800ms ease; }
+.button-primary svg, .button-secondary svg { transition: transform 250ms ease; }
+.button-primary:hover svg:last-child, .button-secondary:hover svg:last-child { transform: translateX(3px); }
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .motion-ink { background: linear-gradient(110deg, var(--theme-accent) 10%, var(--brand-primary) 36%, var(--theme-accent) 48%, var(--brand-primary) 60%, var(--theme-accent) 90%) 0 50% / 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: motion-ink-flow 12s ease-in-out infinite; animation-play-state: paused; }
+  .motion-page[data-motion-ready="true"] .motion-ink { animation-play-state: running; }
+}
+@media (min-width: 640px) { .motion-timeline::after { left: 22px; } }
+.motion-page[data-motion-paused="true"] :is(.motion-atmosphere *, .motion-float, .motion-hand, .motion-sketch path, .motion-paperplane, .motion-status-dot, .motion-ink), .motion-page[data-motion-paused="true"] .motion-timeline::after { animation-play-state: paused; }
+
+@keyframes motion-halo-drift { to { transform: translate(-30px, 30px) scale(1.12); opacity: 0.55; } }
+@keyframes motion-orbit-turn { to { transform: rotate(360deg); } }
+@keyframes motion-mesh-drift { to { transform: translate(22px, -18px); } }
+@keyframes motion-circuit-flow { to { stroke-dashoffset: -1200; } }
+@keyframes motion-ribbon-turn { from { transform: rotate(-8deg) translateY(10px); } to { transform: rotate(8deg) translateY(-10px); } }
+@keyframes motion-signal-out { from { transform: scale(0.86); opacity: 0.8; } to { transform: scale(1.2); opacity: 0; } }
+@keyframes motion-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -7px; } }
+@keyframes motion-wave-hand { 0%, 60%, 100% { rotate: 0deg; } 10%, 30% { rotate: 16deg; } 20%, 40% { rotate: -8deg; } }
+@keyframes motion-sketch-draw { to { stroke-dashoffset: 0; } }
+@keyframes motion-glass-pass { 0% { transform: translateX(-100%); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateX(100%); opacity: 0; } }
+@keyframes motion-button-shine { to { transform: translateX(130%); } }
+@keyframes motion-paperplane { 0%, 100% { translate: 0 0; rotate: -12deg; } 50% { translate: 3px -4px; rotate: -5deg; } }
+@keyframes motion-timeline-flow { to { background-position: 0 calc(100% + 180px); } }
+@keyframes motion-status-pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--brand-primary) 30%, transparent); } 75%, 100% { box-shadow: 0 0 0 5px transparent; } }
+@keyframes motion-phase-select { 0% { transform: rotate(-12deg) scale(0.8); } 60% { transform: rotate(4deg) scale(1.12); } 100% { transform: none; } }
+@keyframes motion-dialog-enter { from { opacity: 0; transform: translateY(12px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes motion-backdrop-enter { from { opacity: 0; } to { opacity: 1; } }
+@keyframes motion-ink-flow { 0%, 100% { background-position: 0 50%; } 50% { background-position: 100% 50%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-page *, .motion-page *::before, .motion-page *::after, .motion-dialog::backdrop { animation: none !important; transition: none !important; }
+  .button-primary::after, .button-secondary::after { animation: none !important; }
+  .button-primary svg, .button-secondary svg { transition: none !important; transform: none !important; }
+  .motion-page [data-tilt], .motion-page .motion-skill > *, .motion-page .motion-social img, .motion-page .motion-opportunity svg { transform: none !important; translate: none !important; }
+  .motion-page .motion-portrait img { scale: none; }
+  .motion-page .motion-sketch path { stroke-dashoffset: 0; }
+  .motion-page .motion-atmosphere { opacity: 0.55; }
+}

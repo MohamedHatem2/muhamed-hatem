@@ -1,0 +1,191 @@
+[
+  {
+    "id": "moallemin",
+    "title": "مِعَلمِين | Moallemin",
+    "description": "Craftsmen Marketplace & Service Platform",
+    "overview": "A platform concept built to help craftsmen overcome limited digital access to job opportunities. The work covered problem discovery, defining the product experience, and shaping a digital service that connects customers with skilled craftsmen.",
+    "features": [
+      "Problem discovery and user-focused product definition",
+      "A digital presence for craftsmen and their services",
+      "A structured experience for discovering service providers",
+      "Product design and development as an ITI graduation project"
+    ],
+    "details": {
+      "type": "Digital Service Platform",
+      "status": "Case Study",
+      "role": "Product Discovery, UX/UI & Development",
+      "platform": "Web"
+    },
+    "gallery": [],
+    "tags": [
+      "Product Discovery",
+      "UX/UI",
+      "Frontend",
+      "ITI Graduation Project"
+    ],
+    "image": "/projects/moallmeen.webp",
+    "mobileImage": null,
+    "url": "https://www.behance.net/gallery/256959939/Moallemin-ITI-Graduation-Project?platform=direct",
+    "featured": true,
+    "cover": "platform",
+    "headline": ["Connecting", "Skills With", "Opportunities"]
+  },
+  {
+    "id": "lead-generation",
+    "title": "Lead Generation",
+    "description": "AI-Assisted Lead Generation Workflow",
+    "overview": "An AI-assisted lead research and qualification workflow developed as a hands-on n8n learning project. It is designed for a creative agency offering motion graphics, branding, and content generation services. The workflow monitors a dedicated Google Drive folder for new or updated lead files, processes the lead information, researches each company online through a search API, and uses an AI Agent to identify relevant business context and potential service opportunities. It then prepares a concise sales-oriented report so a team member can understand who the lead is, what the company does, and how the agency's services may fit.",
+    "features": [
+      "Google Drive triggers detect newly created or updated lead files in a dedicated folder",
+      "n8n coordinates the workflow and passes structured lead details between steps",
+      "HTTP Request + Serper search retrieves public information about the lead and company",
+      "An AI Agent analyzes the company website and online context against the agency services: motion graphics, branding, and content generation",
+      "The AI output is organized into an Executive Summary, Related Information, and Sales Insights",
+      "A follow-up email generation stage prepares personalized outreach content using the researched lead context",
+      "Results are organized in Google Sheets to support review and sales follow-up"
+    ],
+    "details": {
+      "type": "AI-Assisted Sales Research Workflow",
+      "status": "Learning Project",
+      "role": "n8n Workflow Design & AI Integration",
+      "platform": "n8n · Google Drive · Google Sheets · Serper · LLM"
+    },
+    "gallery": [],
+    "tags": [
+      "n8n",
+      "AI Agent",
+      "Google Drive",
+      "Google Sheets",
+      "Serper API",
+      "Lead Research",
+      "Sales Automation"
+    ],
+    "image": "/projects/leads.png",
+    "mobileImage": null,
+    "url": "",
+    "featured": true,
+    "cover": "studio",
+    "headline": ["Find Better", "Leads. Build", "Better Pipelines."],
+    "caseStudy": [
+      {
+        "title": "The challenge",
+        "body": "Finding potential clients is only the first step. A sales team also needs to understand each company, connect its needs to the services being offered, and prepare relevant outreach. Doing this manually for every lead takes time and can produce inconsistent research."
+      },
+      {
+        "title": "How the workflow works",
+        "body": "A Google Drive folder acts as the intake point. When a lead file is created or updated, n8n starts the workflow, gathers the lead and company details, and sends search queries through Serper. The AI Agent reviews the available public information and prepares a short report focused on the agency’s services."
+      },
+      {
+        "title": "AI role",
+        "body": "The AI Agent is used for research synthesis and sales relevance—not simply generating generic text. It looks for information that can help the team assess whether the company may need motion graphics, branding, or content generation, then structures the findings into clear sections."
+      },
+      {
+        "title": "What I learned",
+        "body": "The project helped me practice connecting triggers, HTTP requests, external search, AI Agent tools, structured data, and spreadsheet-based tracking into a multi-step automation. It also highlighted the importance of designing workflows around a real business outcome: helping a sales team prepare for better conversations."
+      }
+    ]
+  },
+  {
+    "id": "orbit",
+    "title": "Orbit",
+    "description": "Learner Task Submission & Review Platform",
+    "overview": "Orbit is a learner task submission and review platform built to bring the assignment workflow into one organized place. In the ITI learning context, tasks were often shared through different channels—WhatsApp messages, Drive links, or individual messages—and some submissions were missed or shared with incorrect permissions. Orbit centralizes assignment distribution, learner submissions, instructor reviews, and revision tracking so both learners and instructors can follow the same process.",
+    "features": [
+      "Centralized assignment publishing with instructions, session details, due dates, scoring, and evaluation criteria",
+      "Learner submission flow with file uploads and clear submission status",
+      "Instructor review workflow with scores and structured feedback",
+      "Revision requests and resubmission tracking in one place",
+      "AI-assisted evaluation support based on assignment context and assessment criteria",
+      "Email notifications to keep learners informed about reviews and required changes"
+    ],
+    "details": {
+      "type": "Learning Operations Platform",
+      "status": "Live Demo",
+      "role": "Product Thinking, UX/UI & Development",
+      "platform": "Web Application"
+    },
+    "gallery": [],
+    "tags": [
+      "Learning Operations",
+      "Workflow Automation",
+      "AI Evaluation",
+      "Supabase",
+      "Frontend"
+    ],
+    "image": "/projects/orbit.png",
+    "mobileImage": null,
+    "url": "https://orbit-blond-mu.vercel.app/",
+    "featured": true,
+    "cover": "platform",
+    "headline": ["A Clearer", "Learning &", "Review Flow"],
+    "demoAccess": {
+      "email": "mohamed@iti.work",
+      "password": "222MMmm@#",
+      "label": "Demo account"
+    }
+  },
+  {
+    "id": "feedback",
+    "title": "Feedback",
+    "description": "Feedback Collection & Insights",
+    "overview": "Feedback is a feedback collection and insights platform designed to help teams collect responses through a shared form, organize them, and turn raw feedback into information that can guide improvements. It focuses on reducing scattered feedback and making it easier to review patterns, understand recurring issues, and decide what needs attention next.",
+    "features": [
+      "Shareable feedback collection experience for gathering responses in a consistent format",
+      "Centralized response management instead of scattered messages and spreadsheets",
+      "Organized feedback views to review submissions and identify recurring themes",
+      "Insight-oriented summaries that help teams move from raw responses to actionable next steps",
+      "A clear interface designed to make feedback easier to collect, understand, and act on"
+    ],
+    "details": {
+      "type": "Feedback Platform",
+      "status": "Live Demo",
+      "role": "Product Thinking, UX/UI & Development",
+      "platform": "Web Application"
+    },
+    "gallery": [],
+    "tags": [
+      "Feedback Management",
+      "Insights",
+      "Product Design",
+      "Frontend",
+      "Web App"
+    ],
+    "image": "/projects/feddback.png",
+    "mobileImage": null,
+    "url": "https://feedback-intelligence-sable.vercel.app/",
+    "featured": true,
+    "cover": "collection",
+    "headline": ["Turn Feedback", "Into Clearer", "Next Steps"],
+    "demoAccess": {
+      "email": "mohamed@iti.work",
+      "password": "222MMmm@#",
+      "label": "Demo account"
+    }
+  },
+  {
+    "id": "anees",
+    "title": "Anees",
+    "description": "Teacher-Facing Student Wellness Platform",
+    "overview": "A teacher-facing platform for tracking student wellbeing indicators and classroom observations. It is designed to support teachers with organized records, summaries, and follow-up recommendations; it is not a diagnostic tool.",
+    "features": [
+      "Teacher-led daily student check-ins",
+      "Organized wellbeing indicators and progress tracking",
+      "AI-assisted summaries and recommendations",
+      "Notifications for cases that may need additional attention"
+    ],
+    "details": {
+      "type": "Education Platform",
+      "status": "Live",
+      "role": "Product Design, Frontend & Automation",
+      "platform": "Web"
+    },
+    "gallery": [],
+    "tags": ["Education", "AI Workflows", "Supabase", "n8n"],
+    "image": "/projects/Anees.png",
+    "mobileImage": null,
+    "url": "https://aneesai.vercel.app/",
+    "featured": true,
+    "cover": "industry",
+    "headline": ["Supporting", "Teachers With", "Better Insights"]
+  }
+]

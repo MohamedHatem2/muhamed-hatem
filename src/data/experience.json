@@ -1,0 +1,154 @@
+[
+  {
+    "id": "education",
+    "title": "Education",
+    "subtitle": "Academic foundation",
+    "icon": "education",
+    "entries": [
+      {
+        "id": "al-azhar-degree",
+        "title": "Bachelor’s Degree in Educational Technology",
+        "organization": "Al-Azhar University · Faculty of Education",
+        "description": "Academic foundation in educational technology, instructional design, and digital learning experiences.",
+        "startDate": "2019-10",
+        "endDate": "2023-06",
+        "icon": "education"
+      }
+    ]
+  },
+  {
+    "id": "training",
+    "title": "Training & Programs",
+    "subtitle": "Learning through practice",
+    "icon": "training",
+    "entries": [
+      {
+        "id": "iti-uiux",
+        "title": "UI/UX Development Scholarship",
+        "organization": "Information Technology Institute (ITI)",
+        "logo": {
+          "src": "/iti-logo.png",
+          "alt": "ITI logo",
+          "width": 2138,
+          "height": 1149
+        },
+        "label": "4-Month Scholarship",
+        "description": "Hands-on training in user research, product thinking, UX/UI design, and frontend development.",
+        "skills": [
+          "UX Research",
+          "Figma",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "startDate": "2025-05",
+        "endDate": "2025-08",
+        "icon": "training"
+      },
+      {
+        "id": "depi-ai-agents",
+        "title": "Applied AI Agents in Education & Teaching",
+        "organization": "Digital Egypt Pioneers Initiative (DEPI)",
+        "label": "Applied AI Track",
+        "description": "Training focused on applied AI agents and practical use cases in education and teaching.",
+        "skills": [
+          "AI Agents",
+          "Prompt Engineering",
+          "Applied AI"
+        ],
+        "startDate": "2026-07",
+        "endDate": "2026-10",
+        "icon": "training"
+      }
+    ]
+  },
+  {
+    "id": "work-experience",
+    "title": "Work Experience",
+    "subtitle": "Building, coordinating & sharing knowledge",
+    "icon": "work",
+    "entries": [
+      {
+        "id": "iti-external-instructor",
+        "title": "Freelance Technical Instructor",
+        "organization": "Information Technology Institute (ITI)",
+        "logo": {
+          "src": "/iti-logo.png",
+          "alt": "ITI logo",
+          "width": 2138,
+          "height": 1149
+        },
+        "highlights": [
+          "Delivered technical and freelancing sessions to 200+ learners, helping them turn concepts into practical projects and professional opportunities.",
+          "Mentored learners in the ITI UI/UX Development track, providing structured project feedback, problem-solving guidance, and support toward their first freelance opportunities.",
+          "Delivered a two-day ITI Freelancing course focused on client communication, project management, and starting a freelance career."
+        ],
+        "skills": [
+          "Technical Instruction",
+          "Freelancing",
+          "Mentoring",
+          "AI & Product Thinking"
+        ],
+        "startDate": "2025-12",
+        "endDate": null,
+        "icon": "teaching"
+      }
+    ]
+  },
+  {
+    "id": "hackathons-achievements",
+    "title": "Hackathons & Achievements",
+    "subtitle": "Competing, collaborating & solving challenges",
+    "icon": "training",
+    "entries": [
+      {
+        "id": "nasa-space-apps-2021",
+        "title": "NASA Space Apps Cairo Hackathon",
+        "organization": "NASA Space Apps Challenge",
+        "logo": {
+          "src": "/nasa.png",
+          "alt": "NASA Space Apps logo",
+          "width": 512,
+          "height": 512
+        },
+        "label": "2nd Place · 2021",
+        "description": "Achieved second place as part of a team working on a forest-fire prediction and management platform. Contributed to UX/UI design and real-time data visualization.",
+        "highlights": [
+          "Collaborated on a solution focused on forest-fire prediction and management",
+          "Contributed to the user experience and real-time data visualization"
+        ],
+        "skills": [
+          "Hackathon",
+          "UX/UI",
+          "Data Visualization",
+          "Team Collaboration"
+        ],
+        "startDate": "2021-01",
+        "endDate": "2021-12",
+        "icon": "education",
+        "certificateUrl": "https://drive.google.com/file/d/1FB8IuCcI2a1ZCIeJrAltdnlsGBE0-irc/view"
+      },
+      {
+        "id": "huawei-ict-competition",
+        "title": "Huawei ICT Competition — Network Track",
+        "organization": "Huawei ICT Competition · Al-Azhar University",
+        "logo": {
+          "src": "/huawei-logo.jpg",
+          "alt": "Huawei logo",
+          "width": 512,
+          "height": 512
+        },
+        "label": "University-level Competition · 2019–2020",
+        "description": "Represented Al-Azhar University in the Huawei ICT Competition network track and developed foundational knowledge of networking concepts.",
+        "skills": [
+          "Networking Fundamentals",
+          "ICT",
+          "Problem Solving"
+        ],
+        "startDate": "2019-01",
+        "endDate": "2020-12",
+        "icon": "training"
+      }
+    ]
+  }
+]
