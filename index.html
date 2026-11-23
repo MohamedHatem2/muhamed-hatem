@@ -6,20 +6,31 @@
     <meta name="theme-color" content="#f3f8fb" />
     <script>
       (() => {
-        let theme
-        try { theme = localStorage.getItem('mohamed-hatem-portfolio-theme') } catch {}
-        if (theme !== 'light' && theme !== 'dark') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-        document.documentElement.dataset.theme = theme
-        document.documentElement.classList.toggle('dark', theme === 'dark')
-        document.documentElement.style.colorScheme = theme
-      })()
+        let theme;
+        try {
+          theme = localStorage.getItem("mohamed-hatem-portfolio-theme");
+        } catch {}
+        if (theme !== "light" && theme !== "dark")
+          theme = matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.toggle("dark", theme === "dark");
+        document.documentElement.style.colorScheme = theme;
+      })();
     </script>
-    <meta name="description" content="Mohamed Hatem — AI Automation, Product Thinking, and intelligent workflow solutions." />
-                <link rel="icon" type="image/webp" href="/avatar.webp" />
-    <link rel="preload" as="image" href="/avatar.webp" fetchpriority="high" />
+    <meta
+      name="description"
+      content="Mohamed Hatem — AI Automation, Product Thinking, and intelligent workflow solutions."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" as="image" href="/me.png" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Mohamed Hatem | Portfolio</title>
   </head>
   <body>
